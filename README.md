@@ -22,5 +22,5 @@ Generated: 2026-10-07 (Asia/Tehran). Method: cf-ech-clone skill.
 - skipped: not CF=5241, not CF / unparsable=2029, no hostname for sni=11
 
 ## Files
-- configs-ech.txt — importable ECH configs
+- sub.txt (base64 of the ECH config list — paste as subscription URL) — importable ECH configs
 - sources.json, report.json — provenance
