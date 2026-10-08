@@ -8,19 +8,19 @@
     {
       "url": "https://raw.githubusercontent.com/0xRadikal/Free-v2ray-Configs/main/secure/configs.txt",
       "type": "raw",
-      "links": 531
+      "links": 1097
     },
     {
       "url": "https://raw.githubusercontent.com/0xRadikal/Free-v2ray-Configs/main/verified/configs_base64.txt",
       "type": "b64",
-      "links": 861
+      "links": 1549
     },
     {
       "url": "https://raw.githubusercontent.com/0xRadikal/Free-v2ray-Configs/main/secure/configs_base64.txt",
       "type": "b64",
-      "links": 531
+      "links": 1097
     }
   ],
-  "total_links": 8740,
-  "unique_links": 7066
+  "total_links": 10560,
+  "unique_links": 7754
 }

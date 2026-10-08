@@ -1,19 +1,21 @@
-# conf — daily Cloudflare ECH-tuned v2ray configs
+# CF ECH subscription — 2026-10-08
 
-Generated: 2026-10-08 (Asia/Tehran). Method: cf-ech-clone skill.
+ECH-tuned Cloudflare-fronted v2ray configs, rebuilt daily.
+Import `sub.txt` (base64 link list) into your client.
 
 ## Sources
+- [raw] https://raw.githubusercontent.com/Delta-Kronecker/V2ray-Config/main/config/all_configs.txt — 6817 links
+- [raw] https://raw.githubusercontent.com/0xRadikal/Free-v2ray-Configs/main/secure/configs.txt — 1097 links
+- [b64] https://raw.githubusercontent.com/0xRadikal/Free-v2ray-Configs/main/verified/configs_base64.txt — 1549 links
+- [b64] https://raw.githubusercontent.com/0xRadikal/Free-v2ray-Configs/main/secure/configs_base64.txt — 1097 links
+- total fetched: 10560, unique: 7754
 
-- https://raw.githubusercontent.com/Delta-Kronecker/V2ray-Config/main/config/all_configs.txt — 6817 links
-- https://raw.githubusercontent.com/0xRadikal/Free-v2ray-Configs/main/secure/configs.txt — 531 links
-- https://raw.githubusercontent.com/0xRadikal/Free-v2ray-Configs/main/verified/configs_base64.txt — 861 links
-- https://raw.githubusercontent.com/0xRadikal/Free-v2ray-Configs/main/secure/configs_base64.txt — 531 links
-
-## Run
-- total fetched: 8740, unique: 7066
-- scanned: 7064, selected CF: 658, emitted: 618
-- skipped: not CF=4570, not CF / unparsable=1811, malformed vmess query link=23, no hostname for sni=8
+## Rewrite
+- scanned: 7752
+- selected (CF-fronted): 856
+- emitted (ECH variants): 814
 
 ## Files
-- sub.txt — base64 of the ECH config list (import as subscription URL)
-- sources.json, report.json — provenance
+- `sub.txt` — base64 subscription (import this)
+- `configs-ech.txt` — readable link list
+- `report.json`, `sources.json` — build metadata
