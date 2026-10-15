@@ -3,24 +3,24 @@
     {
       "url": "https://raw.githubusercontent.com/Delta-Kronecker/V2ray-Config/main/config/all_configs.txt",
       "type": "raw",
-      "links": 6472
+      "links": 6343
     },
     {
       "url": "https://raw.githubusercontent.com/0xRadikal/Free-v2ray-Configs/main/secure/configs.txt",
       "type": "raw",
-      "links": 1071
+      "links": 920
     },
     {
       "url": "https://raw.githubusercontent.com/0xRadikal/Free-v2ray-Configs/main/verified/configs_base64.txt",
       "type": "b64",
-      "links": 1498
+      "links": 1265
     },
     {
       "url": "https://raw.githubusercontent.com/0xRadikal/Free-v2ray-Configs/main/secure/configs_base64.txt",
       "type": "b64",
-      "links": 1071
+      "links": 920
     }
   ],
-  "total_links": 10112,
-  "unique_links": 7354
+  "total_links": 9448,
+  "unique_links": 6987
 }
