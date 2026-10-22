@@ -87,12 +87,11 @@
     "xstack.mahanfixe.workers.dev",
     "youxuanku.kdns.fr"
   ],
-  "selected": 735,
-  "emitted": 731,
+  "selected": 733,
+  "emitted": 728,
   "skipped_reasons": {
     "not CF": 4117,
-    "not CF / unparsable": 2090,
-    "malformed vmess query link": 6,
+    "not CF / unparsable": 2098,
     "no hostname for sni": 11
   }
 }

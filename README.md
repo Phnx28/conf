@@ -37,18 +37,19 @@ Total 10422 links, 6993 unique.
 |---|---|
 | date | 2026-10-22 |
 | scanned | 6991 |
-| Cloudflare-fronted selected | 735 |
-| emitted | 731 |
+| Cloudflare-fronted selected | 733 |
+| emitted | 728 |
 
-Full accounting: 6991 scanned = 6213 skipped before selection (4117 not-CF
-parsed, 2090 not-CF/unparsable, 6 malformed vmess) + 778 qualified (735
-query-shaped selected + 43 vmess) − 11 dropped for no recoverable SNI − 36
-identical duplicate lines = 731 emitted, all distinct.
+Full accounting: 6991 scanned = 6215 skipped before selection (4117 not-CF
+parsed + 2098 not-CF/unparsable, the latter now including upstream-corrupted
+credentials and malformed-vmess groups) + 11 dropped after selection for no
+recoverable SNI + 765 rewritten (722 query-shaped + 43 vmess) − 37 identical
+duplicate lines = 728 emitted, all distinct.
 
 ### Known limitations
 
-- ECH is TLS-only. 9 vmess entries (port 80, `tls: none`) and 56 vless
-  `security=none` entries are plaintext WebSocket over Cloudflare's port 80/8080
-  path: they import and route, but the ECH parameter is inert for them.
+- ECH is TLS-only. 9 vmess entries (port 80, `tls: none`) and 66 vless entries
+  with `security=none`/absent (Cloudflare port 80/8080 plaintext WebSocket) ship
+  and route, but the ECH parameter is inert for them.
 - Cloudflare ranges came from `cloudflare.com/ips-v4` (14 ranges, rc 200) this run;
   the GitHub mirror is only a fallback when that host is SNI-blocked.
