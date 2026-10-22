@@ -24,21 +24,31 @@ REALITY entries are never ECH-able and are skipped.
 
 | # | type | links | url |
 |---|---|---|---|
-| 1 | `raw` | 5134 | https://raw.githubusercontent.com/Delta-Kronecker/V2ray-Config/main/config/all_configs.txt |
-| 2 | `raw` | 1129 | https://raw.githubusercontent.com/0xRadikal/Free-v2ray-Configs/main/secure/configs.txt |
-| 3 | `b64` | 1625 | https://raw.githubusercontent.com/0xRadikal/Free-v2ray-Configs/main/verified/configs_base64.txt |
-| 4 | `b64` | 1129 | https://raw.githubusercontent.com/0xRadikal/Free-v2ray-Configs/main/secure/configs_base64.txt |
+| 1 | `raw` | 5708 | https://raw.githubusercontent.com/Delta-Kronecker/V2ray-Config/main/config/all_configs.txt |
+| 2 | `raw` | 1413 | https://raw.githubusercontent.com/0xRadikal/Free-v2ray-Configs/main/secure/configs.txt |
+| 3 | `b64` | 1888 | https://raw.githubusercontent.com/0xRadikal/Free-v2ray-Configs/main/verified/configs_base64.txt |
+| 4 | `b64` | 1413 | https://raw.githubusercontent.com/0xRadikal/Free-v2ray-Configs/main/secure/configs_base64.txt |
 
-Total 9017 links, 6153 unique.
+Total 10422 links, 6993 unique.
 
 ## Last run
 
 | metric | value |
 |---|---|
-| date | 2026-10-21 |
-| scanned | 6151 |
-| Cloudflare-fronted selected | 649 |
-| emitted | 635 |
+| date | 2026-10-22 |
+| scanned | 6991 |
+| Cloudflare-fronted selected | 735 |
+| emitted | 731 |
 
-Dropped after selection: no hostname for sni × 13, duplicate link × 1 (649 − 14 = 635).
-Not Cloudflare: 3467 parsed + 1995 unparsable.
+Full accounting: 6991 scanned = 6213 skipped before selection (4117 not-CF
+parsed, 2090 not-CF/unparsable, 6 malformed vmess) + 778 qualified (735
+query-shaped selected + 43 vmess) − 11 dropped for no recoverable SNI − 36
+identical duplicate lines = 731 emitted, all distinct.
+
+### Known limitations
+
+- ECH is TLS-only. 9 vmess entries (port 80, `tls: none`) and 56 vless
+  `security=none` entries are plaintext WebSocket over Cloudflare's port 80/8080
+  path: they import and route, but the ECH parameter is inert for them.
+- Cloudflare ranges came from `cloudflare.com/ips-v4` (14 ranges, rc 200) this run;
+  the GitHub mirror is only a fallback when that host is SNI-blocked.
