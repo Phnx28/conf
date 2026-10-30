@@ -24,37 +24,37 @@ REALITY entries are never ECH-able and are skipped.
 
 | # | type | links | url |
 |---|---|---|---|
-| 1 | `raw` | 4412 | https://raw.githubusercontent.com/Delta-Kronecker/V2ray-Config/main/config/all_configs.txt |
-| 2 | `raw` | 1110 | https://raw.githubusercontent.com/0xRadikal/Free-v2ray-Configs/main/secure/configs.txt |
-| 3 | `b64` | 1573 | https://raw.githubusercontent.com/0xRadikal/Free-v2ray-Configs/main/verified/configs_base64.txt |
-| 4 | `b64` | 1110 | https://raw.githubusercontent.com/0xRadikal/Free-v2ray-Configs/main/secure/configs_base64.txt |
+| 1 | `raw` | 4285 | https://raw.githubusercontent.com/Delta-Kronecker/V2ray-Config/main/config/all_configs.txt |
+| 2 | `raw` | 1164 | https://raw.githubusercontent.com/0xRadikal/Free-v2ray-Configs/main/secure/configs.txt |
+| 3 | `b64` | 1643 | https://raw.githubusercontent.com/0xRadikal/Free-v2ray-Configs/main/verified/configs_base64.txt |
+| 4 | `b64` | 1164 | https://raw.githubusercontent.com/0xRadikal/Free-v2ray-Configs/main/secure/configs_base64.txt |
 
-Total 8205 links, 5383 unique.
+Total 8256 links, 5324 unique (2 of which are upstream `#` comment lines).
 
 ## Last run
 
 | metric | value |
 |---|---|
-| date | 2026-10-29 |
-| scanned | 5381 |
-| Cloudflare-fronted selected | 552 |
-| emitted | 455 |
+| date | 2026-10-30 |
+| scanned | 5322 |
+| Cloudflare-fronted selected | 388 |
+| emitted | 413 |
 
-Composition: 250 vless + 162 trojan + 43 vmess.
+Composition: 215 vless + 144 trojan + 54 vmess — all 413 distinct.
 
-Full accounting: 5381 scanned = 4786 skipped before selection
-(2794 not-CF parsed + 1990 not-CF/unparsable,
+Full accounting: 5322 scanned = 4880 skipped before selection
+(2858 not-CF parsed + 2019 not-CF/unparsable,
 the latter including upstream-corrupted credentials and malformed-vmess groups
-+ 2 malformed vmess query links) +
-552 query-shaped selected + 43 vmess rewritten = 595 rewritten,
-of which 108 dropped after selection for no recoverable SNI and 32 removed as
-identical duplicate lines = 455 emitted, all distinct.
++ 3 malformed vmess query links) +
+388 query-shaped selected + 54 vmess rewritten = 442 rewritten,
+of which 10 dropped after selection for no recoverable hostname and 19 removed
+as identical duplicate lines → 359 query lines + 54 vmess = 413 emitted.
 
 ### Known limitations
 
-- ECH is TLS-only. 36 entries are plaintext on Cloudflare ports 80/8080
-  (`security=none`/absent, or vmess `tls: none`) — 28 vless + 8 vmess. They are
+- ECH is TLS-only. 56 entries are plaintext on Cloudflare ports 80/8080
+  (`security=none`/absent, or vmess `tls: none`) — 47 vless + 9 vmess. They are
   routed and importable, but the ECH parameter is inert for them. The remaining
-  419 entries are TLS and ECH-active.
+  357 entries are TLS and ECH-active.
 - Cloudflare ranges came from `cloudflare.com/ips-v4` (14 ranges, rc 0) this run;
   the GitHub mirror is only a fallback when that host is SNI-blocked.
