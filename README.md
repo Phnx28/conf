@@ -24,37 +24,37 @@ REALITY entries are never ECH-able and are skipped.
 
 | # | type | links | url |
 |---|---|---|---|
-| 1 | `raw` | 4294 | https://raw.githubusercontent.com/Delta-Kronecker/V2ray-Config/main/config/all_configs.txt |
+| 1 | `raw` | 4399 | https://raw.githubusercontent.com/Delta-Kronecker/V2ray-Config/main/config/all_configs.txt |
 | 2 | `raw` | 1247 | https://raw.githubusercontent.com/0xRadikal/Free-v2ray-Configs/main/secure/configs.txt |
-| 3 | `b64` | 1730 | https://raw.githubusercontent.com/0xRadikal/Free-v2ray-Configs/main/verified/configs_base64.txt |
+| 3 | `b64` | 1841 | https://raw.githubusercontent.com/0xRadikal/Free-v2ray-Configs/main/verified/configs_base64.txt |
 | 4 | `b64` | 1247 | https://raw.githubusercontent.com/0xRadikal/Free-v2ray-Configs/main/secure/configs_base64.txt |
 
-Total 8518 links, 5420 unique (2 of which are upstream `#` comment lines).
+Total 8734 links, 5660 unique (2 of which are upstream `#` comment lines).
 
 ## Last run
 
 | metric | value |
 |---|---|
-| date | 2026-10-31 |
-| scanned | 5418 |
-| Cloudflare-fronted selected | 420 |
-| emitted | 452 |
+| date | 2026-11-01 |
+| scanned | 5658 |
+| Cloudflare-fronted selected | 575 |
+| emitted | 578 |
 
-Composition: 210 vless + 172 trojan + 70 vmess — all 452 distinct.
+Composition: 232 vless + 251 trojan + 95 vmess — all 578 distinct.
 
-Full accounting: 5418 scanned = 4928 skipped before selection
-(2934 not-CF parsed + 1992 not-CF/unparsable,
+Full accounting: 5658 scanned = 4988 skipped before selection
+(3004 not-CF parsed + 1981 not-CF/unparsable,
 the latter including upstream-corrupted credentials and malformed-vmess groups
-+ 2 malformed vmess query links) +
-420 query-shaped selected + 70 vmess rewritten = 490 rewritten,
-of which 13 dropped after selection for no recoverable hostname and 25 removed
-as identical duplicate lines → 382 query lines + 70 vmess = 452 emitted.
++ 3 malformed vmess query links) +
+575 query-shaped selected + 95 vmess rewritten = 670 rewritten,
+of which 25 dropped after selection for no recoverable hostname and 67 removed
+as identical duplicate lines → 483 query lines + 95 vmess = 578 emitted.
 
 ### Known limitations
 
-- ECH is TLS-only. 51 entries are plaintext on Cloudflare ports 80/8080
-  (`security=none`/absent, or vmess `tls: none`) — 40 vless/trojan + 11 vmess.
+- ECH is TLS-only. 44 entries are plaintext on Cloudflare ports 80/8080
+  (`security=none`/absent, or vmess `tls: none`) — 32 vless + 12 vmess.
   They are routed and importable, but the ECH parameter is inert for them. The
-  remaining 401 entries are TLS and ECH-active.
+  remaining 534 entries are TLS and ECH-active.
 - Cloudflare ranges came from `cloudflare.com/ips-v4` (14 ranges, rc 0) this run;
   the GitHub mirror is only a fallback when that host is SNI-blocked.
